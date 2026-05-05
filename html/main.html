@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>infoestados</title>
+</head>
+<body>
+    <div class="container-fluid">
+     <div class="form-group">
+      <form action="#" class="form1" style="display: block;">
+        <nav class="navbar navbar-expand sticky-top px-4 py-0 gap-5">
+          <div class="nav-item ms-0 d-flex align-items-center">
+              <a href="https://luizagsoaress.github.io/InfoEstados/html/main.html" translate="no" class="logo-nome">Info</a>
+              <a href="https://luizagsoaress.github.io/InfoEstados/html/main.html" translate="no" class="logo-sub">Estados</a>
+          </div>
+          <div class="nav-links">
+            <div class="nav-item map-div">
+              <a href="#" class="nav-link mapa btn-mapa" data-bs-toggle="modal" data-bs-target=".mapaModal">
+                <img src="" class="fa-solid fa-map mapa-img"></img>
+              </a>
+            </div>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link data" data-bs-toggle="dropdown" >
+                <img src="" class="fa-solid fa-database data-img"></img>
+              </a>
+              <div class="dropdown-menu-end dropdown-menu">
+                <a href="https://cidades.ibge.gov.br/" class="dropdown-item">
+                  <div class="d-flex align-items-center">
+                    <div class="ms-2">
+                      <h6 class="fw-normal mb-0">IBGE</h6>
+                      <small>Dados dos estados e cidades do Brasil.</small>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link avatar" data-bs-toggle="dropdown" >
+                <img src="" class="fa-solid fa-user avatar-img"></img>
+              </a>
+              <div class="dropdown-menu-end dropdown-menu">
+                  <a href="#" type="button" class="dropdown-item sobre" data-bs-toggle="modal" data-bs-target="#sobreModal">Sobre</a>
+                  <a href="https://luizagsoaress.github.io/InfoEstados/html/perfil.html" type="button" class="dropdown-item minha-conta">Minha conta</a>
+                  <a href="https://luizagsoaress.github.io/InfoEstados/index.html" type="button" class="dropdown-item sair">Sair</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="modal fade" id="sobreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Sobre o site</h5>
+              </div>
+              <div class="modal-body">
+                  Esta página web foi desenvolvida como um projeto de estudo sobre HTML5, CSS e JavaScript. O banco de dados utilizado para a autenticação dos usuários e para o armazenamento de informações foi o <a href="https://firebase.google.com/" style="text-decoration: none;">Firebase</a>. As chaves privadas, assim como o código em C para a ordenação de listas de strings, foram hospedados em um servidor Node.js com Express, que está em execução no <a href="https://render.com/" style="text-decoration: none;">Render</a>.
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="botoes-fixo">
+          <a href="#" type="button" class="btn-inverso">
+            <i class="fas fa-exchange-alt"></i>
+          </a>
+          <a href="#" type="button" class="btn-add">
+            <i class="fas fa-plus"></i>
+          </a>
+        </div>
+      </form>
+      </div>
+
+      <div class="div-search">
+        <div class="form-search">
+          <input class="search-input searchBox" type="search" placeholder="Pesquise aqui os estados já adicionados...">
+        </div>
+      </div>
+
+      <div class="div-desenho"></div>
+
+      <div class="modal fade infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title infoModalLabel">Informações sobre o estado selecionado</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+              </div>
+              <div class="modal-body infoModalBody">
+                
+              </div>
+            </div>
+          </div>
+      </div> 
+
+      <div class="modal fade mapaModal" tabindex="-1" aria-labelledby="mapaModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="mapaModalLabel">Mapa do Brasil</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center align-items-center mapaModalBody">
+              <img src="https://luizagsoaress.github.io/InfoEstados/imagens/mapa_brasil.jpg" alt="mapa-brasil" class="mapa-brasil">
+            </div>
+            </div>
+          </div>
+      </div>
+    
+      <form action="#" class="form2" style="display: none;">
+        <div class="card-form2">
+            <img src="https://luizagsoaress.github.io/InfoEstados/imagens/mapaMundi.webp" alt="mundi" class="mapa-mundi">
+            <h2 class="titulo-form2">Escolha um estado</h2>
+            <p class="subtitulo-form2">Vamos te mostrar dados completos sobre o estado selecionado.</p>
+            <div class="alert alert-danger w-100 mt-3 alert-danger" role="alert" style="display: none;">
+              Escolha um estado para continuar.
+            </div>
+            <select name="estados" class="form-select estados mt-3">
+                <option value="">Selecione um estado</option>
+                <option value="ac">Acre</option>
+                <option value="al">Alagoas</option>
+                <option value="ap">Amapá</option>
+                <option value="am">Amazonas</option>
+                <option value="ba">Bahia</option>
+                <option value="ce">Ceará</option>
+                <option value="df">Distrito Federal</option>
+                <option value="es">Espírito Santo</option>
+                <option value="go">Goiás</option>
+                <option value="ma">Maranhão</option>
+                <option value="mt">Mato Grosso</option>
+                <option value="ms">Mato Grosso do Sul</option>
+                <option value="mg">Minas Gerais</option>
+                <option value="pa">Pará</option>
+                <option value="pb">Paraíba</option>
+                <option value="pr">Paraná</option>
+                <option value="pe">Pernambuco</option>
+                <option value="pi">Piauí</option>
+                <option value="rj">Rio de Janeiro</option>
+                <option value="rn">Rio Grande do Norte</option>
+                <option value="rs">Rio Grande do Sul</option>
+                <option value="ro">Rondônia</option>
+                <option value="rr">Roraima</option>
+                <option value="sc">Santa Catarina</option>
+                <option value="sp">São Paulo</option>
+                <option value="se">Sergipe</option>
+                <option value="to">Tocantins</option>
+            </select>
+            <a href="#" class="btn-adicionar mt-4">Adicionar</a>
+        </div>
+      </form>
+    </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script type="module" src="https://luizagsoaress.github.io/InfoEstados/js/main.js"></script>
+
+</body>    
+</html>

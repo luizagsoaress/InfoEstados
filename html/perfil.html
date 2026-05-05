@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="icon" type="image/svg" href="https://luizagsoaress.github.io/InfoEstados/imagens/logo.svg">
+    <title>Meus dados</title>
+</head>
+<body>
+    <div class="container-fluid">
+    	<nav class="navbar navbar-expand sticky-top px-4 py-0 gap-5">
+          <div class="nav-item ms-0 d-flex align-items-center">
+              <a href="https://luizagsoaress.github.io/InfoEstados/html/main.html" translate="no" class="logo-nome">Info</a>
+              <a href="https://luizagsoaress.github.io/InfoEstados/html/main.html" translate="no" class="logo-sub">Estados</a>
+          </div>
+          <div class="nav-links">
+            <div class="nav-item map-div">
+              <a href="#" class="nav-link mapa btn-mapa" data-bs-toggle="modal" data-bs-target=".mapaModal">
+                <img src="" class="fa-solid fa-map mapa-img"></img>
+              </a>
+            </div>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link data" data-bs-toggle="dropdown" >
+                <img src="" class="fa-solid fa-database data-img"></img>
+              </a>
+              <div class="dropdown-menu-end dropdown-menu">
+                <a href="https://cidades.ibge.gov.br/" class="dropdown-item">
+                  <div class="d-flex align-items-center">
+                    <div class="ms-2">
+                      <h6 class="fw-normal mb-0">IBGE</h6>
+                      <small>Dados dos estados e cidades do Brasil.</small>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link avatar" data-bs-toggle="dropdown" >
+                <img src="" class="fa-solid fa-user avatar-img"></img>
+              </a>
+              <div class="dropdown-menu-end dropdown-menu">
+                  <a href="#" type="button" class="dropdown-item sobre" data-bs-toggle="modal" data-bs-target="#sobreModal">Sobre</a>
+                  <a href="https://luizagsoaress.github.io/InfoEstados/html/perfil.html" type="button" class="dropdown-item minha-conta">Minha conta</a>
+                  <a href="https://luizagsoaress.github.io/InfoEstados/index.html" type="button" class="dropdown-item sair">Sair</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <div class="modal fade" id="sobreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Sobre o site</h5>
+              </div>
+              <div class="modal-body">
+                  Esta página web foi desenvolvida como um projeto de estudo sobre HTML5, CSS e JavaScript. O banco de dados utilizado para a autenticação dos usuários e para o armazenamento de informações foi o <a href="https://firebase.google.com/" style="text-decoration: none;">Firebase</a>. As chaves privadas, assim como o código em C para a ordenação de listas de strings, foram hospedados em um servidor Node.js com Express, que está em execução no <a href="https://render.com/" style="text-decoration: none;">Render</a>.
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="modal fade mapaModal" tabindex="-1" aria-labelledby="mapaModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="mapaModalLabel">Mapa do Brasil</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center align-items-center mapaModalBody">
+              <img src="https://luizagsoaress.github.io/InfoEstados/imagens/mapa_brasil.jpg" alt="mapa-brasil" class="mapa-brasil">
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="formDados">			
+            <div class="d-flex justify-content-center align-items-center mt-4 flex-column div-senha">
+                <div class="form-header">
+                    <a href="https://luizagsoaress.github.io/InfoEstados/html/main.html" class="voltar-main"><i class="fa-solid fa-arrow-left"></i></a>
+                    <h1 class="form-titulo">Editar dados</h1>
+                </div>
+
+                <div class="form-card">
+                    <div class="field-group">
+                        <label for="input-senha" class="label-senha">Senha</label>
+                        <div class="field-row">
+                            <input type="password" class="input-senha" disabled placeholder="*********">
+                            <a href="#" class="editar-senha field-action">
+                                <i class="fa-solid fa-pencil pencil-white"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="form-divider"></div>
+
+                    <div class="field-group div-email">
+                        <label for="input-email" class="label-email">Email</label>
+                        <div class="field-row">
+                            <input type="text" class="input-email" disabled placeholder="**********">
+                            <a href="#" class="field-action field-action--disabled ban">
+                                <i class="fa-solid fa-ban ban"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="div-deletar">
+                <div class="deletar-card">
+                    <h1 class="deletar-card-titulo">Deletar conta</h1>
+                </div>
+                <div class="deletar-card-container">
+                    <div class="deletar-card-body">
+                        <div class="deletar-card-info">
+                            <span class="deletar-card-nome">Deletar minha conta</span>
+                            <span class="deletar-card-aviso">Uma vez que você deletar sua conta, não há como voltar atrás.</span>
+                        </div>
+                        <a href="#" class="deletar">Deletar conta</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="editar-div d-none d-flex justify-content-center align-items-center mt-5 flex-column">
+                <div class="w-100 justify-content-start align-items-center">
+                    <a href="https://luizagsoaress.github.io/InfoEstados/InfoEstados/html/perfil.html" class="fa-solid fa-arrow-left voltar mb-5"></a>
+                </div>
+                <div class="d-flex w-100 mb-2">
+                    <label for="input-senha" class="label-senha">Senha nova (Minimo de 6 caracteres) <span class="required">*</span></label>
+                </div>
+                <div class="d-flex justify-content-center align-items-center flex-row">
+                    <input type="text" class="input-senha-nova" id="senhaNova" placeholder="Digite a nova senha...">
+                </div>
+                <div class="d-flex w-100 mt-4">
+                    <a href="#" class="confirmar">Confirmar</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="minhaConta" id="minhaConta">
+  		<div class="menu-header">
+    		<div class="avatar-menu"></div>
+    			<span class="menu-greeting">Minha conta</span>
+  			</div>
+  			<div class="menu-card">
+    			<a href="#" class="menu-item atualizar">Meus dados<span class="menu-arrow">›</span></a>
+    			<a href="#" class="menu-item favoritos">Favoritos<span class="menu-arrow">›</span></a>
+  			</div>
+  		<a href="#" class="btn-fechar" onclick="closeConta()">Fechar</a>
+	</div>
+
+    <script src="https://luizagsoaress.github.io/InfoEstados/js/perfil.js"></script>
+</body>
+</html>
