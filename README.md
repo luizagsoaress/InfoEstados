@@ -27,35 +27,35 @@ Economia, educação, território, trabalho, população, capital e governador, 
 
 Na tela inicial, crie uma conta ou faça login. Os métodos disponíveis são email/senha, Google e Github.
 
-![Img](https://luizagsoaress.github.io/InfoEstados/imagens/github/github(1).png)
+![Img](./imagens/github/github(1).png)
 
 Após o login, você será redirecionado para a tela principal. Para adicionar um estado, clique no ícone **+** no canto inferior direito, escolha o estado e clique em **Adicionar**.
 
-![Img](https://luizagsoaress.github.io/InfoEstados/imagens/github/github(2).png)
+![Img](./imagens/github/github(2).png)
 
-![Img](https://luizagsoaress.github.io/InfoEstados/imagens/github/github(3).png)
+![Img](./imagens/github/github(3).png)
 
 O estado aparecerá na tela em ordem alfabética. Clique nele para ver o conteúdo completo.
 
-![Img](https://luizagsoaress.github.io/InfoEstados/imagens/github/github(4).png)
+![Img](./imagens/github/github(4).png)
 
-![Img](https://luizagsoaress.github.io/InfoEstados/imagens/github/github(5).png)
+![Img](./imagens/github/github(5).png)
 
 Para encontrar um estado já adicionado, use a caixa de busca no topo da tela.
 
-![Img](https://luizagsoaress.github.io/InfoEstados/imagens/github/github(9).png)
+![Img](./imagens/github/github(9).png)
 
 Para inverter a ordem de exibição, clique no ícone de inversão acima do **+**.
 
-![Img](https://luizagsoaress.github.io/InfoEstados/imagens/github/github(6).png)
+![Img](./imagens/github/github(6).png)
 
 Para visualizar o mapa completo do Brasil, clique no ícone de mapa no topo da tela.
 
-![Img](https://luizagsoaress.github.io/InfoEstados/imagens/github/github(7).png)
+![Img](./imagens/github/github(7).png)
 
 Para editar seus dados ou deletar sua conta, clique no avatar e selecione **Minha conta**.
 
-![Img](https://luizagsoaress.github.io/InfoEstados/imagens/github/github(8).png)
+![Img](./imagens/github/github(8).png)
 
 ## Tecnologias
 
@@ -72,4 +72,4 @@ Para editar seus dados ou deletar sua conta, clique no avatar e selecione **Minh
 
 ## Acesse
 
-> [luizagsoaress.github.io/InfoEstados](https://luizagsoaress.github.io/InfoEstados/)
+> [luizagsoaress.github.io/InfoEstados](./)
